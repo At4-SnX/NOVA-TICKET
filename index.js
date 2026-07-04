@@ -86,21 +86,21 @@ client.on("messageCreate", async (message) => {
 
   const menu = new StringSelectMenuBuilder()
     .setCustomId("ticket_menu")
-    .setPlaceholder("📂 Choisissez une catégorie de ticket")
+    .setPlaceholder("Choisissez une catégorie de ticket ici !")
     .addOptions([
-      { label: "Question", value: "question", emoji: "❓" },
-      { label: "Partenariat", value: "partenariat", emoji: "🤝" },
-      { label: "Report Staff", value: "reportstaff", emoji: "🛡️" },
-      { label: "Report Joueur", value: "reportjoueur", emoji: "⚠️" },
-      { label: "Demande Légal", value: "legal", emoji: "📘" },
-      { label: "Demande Illégal", value: "illegal", emoji: "📕" },
-      { label: "Fondation", value: "fondation", emoji: "🏛️" },
-      { label: "Demande d'unban", value: "unban", emoji: "🔓" },
+      { label: "Question", value: "question", emoji: "<:Question:1522992583134019759>" },
+      { label: "╭ Partenariat", value: "partenariat", emoji: "<:387547bluetick:1522993154398224394>" },
+      { label: "| Report Staff", value: "reportstaff", emoji: "<:Staff:1522993607282393150>" },
+      { label: "| Report Joueur", value: "reportjoueur", emoji: "<:hammer:1522994093645500507>" },
+      { label: "| Demande Légal", value: "legal", emoji: "📘" },
+      { label: "| Demande Illégal", value: "illegal", emoji: "📕" },
+      { label: "| Direction", value: "fondation", emoji: "<a:17472bluecrown:1522994754336460990>" },
+      { label: "╰ Demande d'unban", value: "unban", emoji: "<a:Ban:1522994388110807120>" },
     ]);
 
   const embed = new EmbedBuilder()
     .setColor(THEME_COLOR)
-    .setTitle(`🎫 Support ${SERVER_NAME}`)
+    .setTitle(`<:431007ticketicon1:1522995123258916925>〃NOVɅ — TICKET `)
     .setDescription("Sélectionne une catégorie ci-dessous pour ouvrir un ticket.");
 
   await message.channel.send({
@@ -142,7 +142,7 @@ client.on("interactionCreate", async (interaction) => {
 
         const staffMenu = new StringSelectMenuBuilder()
           .setCustomId("select_report_staff")
-          .setPlaceholder("🛡️ Quel staff veux-tu reporter ?")
+          .setPlaceholder("<:Staff:1522993607282393150> ・ Quel staff veux-tu reporter ?")
           .addOptions(
             staffMembers.first(25).map((m) => ({
               label: m.user.tag,
@@ -151,7 +151,7 @@ client.on("interactionCreate", async (interaction) => {
           );
 
         return interaction.reply({
-          embeds: [infoEmbed("🛡️ Sélectionne le membre du staff que tu souhaites reporter.")],
+          embeds: [infoEmbed("<:431007ticketicon1:1522995123258916925> ・ Sélectionne le membre du staff que tu souhaites reporter.")],
           components: [new ActionRowBuilder().addComponents(staffMenu)],
           ephemeral: true,
         });
@@ -160,7 +160,7 @@ client.on("interactionCreate", async (interaction) => {
       // ───────── AUTRES TYPES : OUVERTURE DU MODAL DIRECT ─────────
       const modal = new ModalBuilder()
         .setCustomId(`ticket_form_${type}`)
-        .setTitle("🎫 Création d'un ticket");
+        .setTitle("🎫 ・ Création d'un ticket.");
 
       if (type === "reportjoueur") {
         modal.addComponents(
@@ -198,7 +198,7 @@ client.on("interactionCreate", async (interaction) => {
           new ActionRowBuilder().addComponents(
             new TextInputBuilder()
               .setCustomId("ticket_unban_raison")
-              .setLabel("Pourquoi devrions-nous te déban ?")
+              .setLabel("Pourquoi à tu été ban ? Pourquoi devrions nous te déban ? Par qui avez vous été ban ?")
               .setStyle(TextInputStyle.Paragraph)
               .setRequired(true)
           )
