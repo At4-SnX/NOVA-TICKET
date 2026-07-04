@@ -596,6 +596,7 @@ client.on("interactionCreate", async (interaction) => {
 
 if (!TOKEN) {
   console.error("[NOVA TICKET] ❌ DISCORD_TOKEN n'est pas défini. Impossible de démarrer.");
+  client.user.setActivity("🔗〃NOVɅ RP | EHRP", { type: 3 });
   process.exit(1);
 }
 
