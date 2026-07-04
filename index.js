@@ -88,14 +88,14 @@ client.on("messageCreate", async (message) => {
     .setCustomId("ticket_menu")
     .setPlaceholder("Choisissez une catégorie de ticket ici !")
     .addOptions([
-      { label: "Question", value: "question", emoji: "<:Question:1522992583134019759>" },
-      { label: "╭ Partenariat", value: "partenariat", emoji: "<:387547bluetick:1522993154398224394>" },
-      { label: "| Report Staff", value: "reportstaff", emoji: "<:Staff:1522993607282393150>" },
-      { label: "| Report Joueur", value: "reportjoueur", emoji: "<:hammer:1522994093645500507>" },
-      { label: "| Demande Légal", value: "legal", emoji: "📘" },
-      { label: "| Demande Illégal", value: "illegal", emoji: "📕" },
-      { label: "| Direction", value: "fondation", emoji: "<a:17472bluecrown:1522994754336460990>" },
-      { label: "╰ Demande d'unban", value: "unban", emoji: "<a:Ban:1522994388110807120>" },
+      { label: "— Question", value: "question", emoji: "<:Question:1522992583134019759>" },
+      { label: "— Partenariat", value: "partenariat", emoji: "<:387547bluetick:1522993154398224394>" },
+      { label: "— Report Staff", value: "reportstaff", emoji: "<:Staff:1522993607282393150>" },
+      { label: "— Report Joueur", value: "reportjoueur", emoji: "<:hammer:1522994093645500507>" },
+      { label: "— Demande Légal", value: "legal", emoji: "📘" },
+      { label: "— Demande Illégal", value: "illegal", emoji: "📕" },
+      { label: "— Direction", value: "fondation", emoji: "<a:17472bluecrown:1522994754336460990>" },
+      { label: "— Demande d'unban", value: "unban", emoji: "<:835996webicon1:1522997678936424569>" },
     ]);
 
   const embed = new EmbedBuilder()
@@ -198,7 +198,7 @@ client.on("interactionCreate", async (interaction) => {
           new ActionRowBuilder().addComponents(
             new TextInputBuilder()
               .setCustomId("ticket_unban_raison")
-              .setLabel("Pourquoi à tu été ban ? Pourquoi devrions nous te déban ? Par qui avez vous été ban ?")
+              .setLabel("Pourquoi à tu été ban, par qui, combien de temps ?")
               .setStyle(TextInputStyle.Paragraph)
               .setRequired(true)
           )
