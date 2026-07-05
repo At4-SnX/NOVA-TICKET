@@ -91,49 +91,49 @@ client.on("messageCreate", async (message) => {
     .setPlaceholder("Choisissez une catégorie de ticket ici !")
     .addOptions([
 { 
-  label: "— Question", 
+  label: "Question", 
   value: "question", 
   description: "Posez une question concernant le serveur ou son fonctionnement.",
   emoji: "<:Question:1522992583134019759>" 
 },
 { 
-  label: "— Partenariat", 
+  label: "Partenariat", 
   value: "partenariat", 
   description: "Effectuez une demande de partenariat avec notre serveur.",
   emoji: "<:387547bluetick:1522993154398224394>" 
 },
 { 
-  label: "— Report Staff", 
+  label: "Report Staff", 
   value: "reportstaff", 
   description: "Signalez un comportement inapproprié d'un membre du staff.",
   emoji: "<:Staff:1522993607282393150>" 
 },
 { 
-  label: "— Report Joueur", 
+  label: "Report Joueur", 
   value: "reportjoueur", 
   description: "Signalez un joueur ne respectant pas le règlement.",
   emoji: "<:hammer:1522994093645500507>" 
 },
 { 
-  label: "— Demande Légal", 
+  label: "Demande Légal", 
   value: "legal", 
   description: "Effectuez une demande liée aux activités ou entreprises légales.",
   emoji: "📘" 
 },
 { 
-  label: "— Demande Illégal", 
+  label: "Demande Illégal", 
   value: "illegal", 
   description: "Effectuez une demande concernant une organisation illégale.",
   emoji: "📕" 
 },
 { 
-  label: "— Direction", 
+  label: "Direction", 
   value: "fondation", 
   description: "Contactez directement la direction pour une demande importante.",
-  emoji: "<a:17472bluecrown:1522994754336460990>" 
+  emoji: "<:431007ticketicon1:1522995123258916925>" 
 },
 { 
-  label: "— Demande d'unban", 
+  label: "Demande d'unban", 
   value: "unban", 
   description: "Déposez une demande afin de contester votre bannissement.",
   emoji: "<:835996webicon1:1522997678936424569>" 
