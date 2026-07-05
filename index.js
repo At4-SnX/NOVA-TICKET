@@ -184,7 +184,7 @@ client.on("interactionCreate", async (interaction) => {
 
         const staffMenu = new StringSelectMenuBuilder()
           .setCustomId("select_report_staff")
-          .setPlaceholder("<:Staff:1522993607282393150> ・ Quel staff veux-tu reporter ?")
+          .setPlaceholder("Quel staff veux-tu reporter ?")
           .addOptions(
             staffMembers.first(25).map((m) => ({
               label: m.user.tag,
